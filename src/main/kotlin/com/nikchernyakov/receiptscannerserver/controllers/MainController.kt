@@ -16,7 +16,7 @@ import java.lang.StringBuilder
 @Controller
 class MainController {
 
-    var salesReceiptScanner = SalesReceiptScanner()
+    var salesReceiptScanner = SalesReceiptScanner("src/main/resources/tess/data")
 
     @GetMapping("/")
     fun index(): String = "index.html"
@@ -31,7 +31,9 @@ class MainController {
                 stream.write(file.bytes)
                 stream.close()
                 val sb = StringBuilder()
-                salesReceiptScanner.doScan(resultFile).purchaseInfo.items.forEach { sb.append(it.toString()) }
+                salesReceiptScanner.doScan(resultFile).purchaseInfo.items.forEach {
+                    sb.append(it.toString()).append("\n")
+                }
                 sb.toString()
             } catch (e: Exception) {
                 "Вам не удалось загрузить file: + \n" + e.message;
