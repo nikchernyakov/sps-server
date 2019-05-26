@@ -1,3 +1,8 @@
 ghostscript
+pkg-config
+autoconf
+automake
+libtool
 tesseract-ocr
 libtesseract-dev
+libleptonica-dev
