@@ -23,6 +23,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.github.nikchernyakov:sales-receipt-scanner:0.0.2")
+    implementation("net.sourceforge.tess4j:tess4j:4.3.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
